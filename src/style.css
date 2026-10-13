@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
+@theme {
+
+    @keyframe fadeSlideIn{
+        0%{
+            opacity:0;
+            tranform:translateY(16px);
+        }
+        100%{
+            opacity:1%;
+            transform:translateY(0);
+    }
+    } 
+        
+    --animate-fade-slide: fadeSlideIn 0.5 ease-out forwards;
+}

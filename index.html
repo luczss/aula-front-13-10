@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rek="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-4 sm:p-8">
+
+    <main class="max-w-4xl mx-auto space-y-12 animate-fade-slide">
+        <header class="border-b border-slate-900 pb-6">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white">
+                portal de acessibilidade
+            </h1>
+            <p class="text-slate-400 mt-2">
+                Aprenda sobre desenvolvimento inclusivo
+            </p>
+        </header>
+        <section aria-labelledby="titulo-form"
+        class="bg-slate-800 p-6 rounded-2xl border-slate-700">
+
+        <h2 id:"titulo-form"
+            class="text-xl font-bold text-white mb-4">
+        formlario Acessivel
+        </h2>
+
+        <form onsubmit="event.preventDefault(); abrirModal();" class="space-y-4">
+            <div>
+                <label for="email" class="block text-sm font-medium text-slate-300 mb-1">
+                endereço de E-mail
+                </label>
+                <input type="email" id="email" required placeholder="seuemail@email.com" class="w-full px-4 py-2.5 
+                bg-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none
+                focus-visible:ring-2 focus-visible:ring-offset-emerald-400">
+                <button type="submit" class="px-6 py-3 bg-emerald-500 text-slate-950 font-bold rounded-xl
+                hover:bg-emerald-400 focus:outline-none focus-visible:ring-4
+                focus-visible:ring-emerald-400/40 transition-all">
+                inscrever-se 
+                <span class="sr-only">
+                    na nossa newslatter de acessibilidade
+                </span>
+                </button>
+            </form>
+        </section>
+    </div>
+
+    <section aria-labelledby="titulo-artigo">
+        <h2 id="titulo-artigo" class="sr-only">
+            Artigo do Blog
+        </h2>
+
+        <article class="prose prose-invert max-w-none
+        prose-headings: text-emerald-400
+        prose-a: text-emerald-400">
+
+        </article>
+    </section>
+    
+    </main>
+    
+</body>
+</html>
