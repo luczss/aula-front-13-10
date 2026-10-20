@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rek="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="./src/style.css">
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen p-4 sm:p-8">
 
@@ -53,11 +53,55 @@
         <article class="prose prose-invert max-w-none
         prose-headings: text-emerald-400
         prose-a: text-emerald-400">
+        <h3>Boas Práticas de Navegação por Teclado</h3>
+        <p>
+            Garantir que todos os elementos interativos sejam acessíveis
+            via teclado é um pilar fundamental da acessibilidade web.
+        </p>
+        <ul>
+            <li>Utilize marcas semânticas como HTML5 puro.</li>
+            <li>Nunca remova os anéis de foco sem fornecer uma alternativa.</li>
+            <li>Verifique o contraste das cores com ferramentas de auditoria.</li>
+        </ul>
 
         </article>
     </section>
+
     
     </main>
+    <div id="modalAcessivel" role="dialog" aria-modal="true" aria-labelledby="modal-titulo"
+    class="hidden fixed inset-0 bg-slate-950/50 backdrop-blur-se flex items-center justify-center">
+    <div class="bg-slate-800 border border-slate-700 p-6 rounded-2x1 max-w-sm w-full space-y-4">
+        <P class="text-slate-300 text-sm">
+        </P>
+        <button id="btnfecharModal" onclick="fecharModal()" aria-label="Fechar janela de confirmaçao"
+        class="w-full py-2.5 bg-slate-700 text-white font-semibold rounded-xl
+        hover:bg-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400">
+        fechar
+        </button>
+    </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modalAcessivel');
+        const btnFechar = document.getElementById('btnFecharModal')
+
+        function abrirModal(){
+            modal.classList.remove('hidden');
+            btnFechar.focus();
+        }
+
+        function fecharModal(){
+            modal.classList.add('hidden');
+            document.getElementById('email').focus();
+        }
+
+        document.addEventListener('keydown', (e) => {
+                if (e.key == 'Escape' && !modal.classList.contains('hidden')) {
+                    fecharModal();
+                }
+            });
+    </script>
     
 </body>
 </html>

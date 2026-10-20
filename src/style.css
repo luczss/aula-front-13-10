@@ -1,19 +1,22 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-
+/* Declarações de tema e animações no tailwindcss */
 @theme {
 
-    @keyframe fadeSlideIn{
-        0%{
-            opacity:0;
-            tranform:translateY(16px);
+    /* Define os quadros-chave de animação de entrada */
+    @keyframes fadeSlideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(16px);
         }
-        100%{
-            opacity:1%;
-            transform:translateY(0);
+
+        100% {
+            opacity: 1;
+            transform: tranlateY(0);
+        }
     }
-    } 
-        
-    --animate-fade-slide: fadeSlideIn 0.5 ease-out forwards;
+
+    /* Registra a classe utilitaria 'animate-fade-slide' */
+    --animate-fade-slide: fadeSlideIn 0.5s ease-out forwards;
 }
